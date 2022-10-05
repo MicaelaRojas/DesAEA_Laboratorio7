@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Semana05.View"
+        xmlns:local="clr-namespace:Semana05.View" 
+        xmlns:viewmodel="clr-namespace:Semana05.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:ListaCategoriaViewModel}"
         mc:Ignorable="d"
         Title="ListaCategoria" Height="450" Width="800">
     <Window.Resources>
@@ -28,7 +30,7 @@
                           GridLinesVisibility="Vertical" HeadersVisibility="All" 
                           Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue" 
                           BorderBrush="Gray" BorderThickness="5" 
-                          ItemsSource="{Binding Categoria}" 
+                          ItemsSource="{Binding Categorias}" 
                           ></DataGrid>
             </StackPanel>
 
